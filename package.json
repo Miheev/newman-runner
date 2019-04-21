@@ -1,0 +1,27 @@
+{
+  "name": "newman-runner",
+  "version": "1.0.0",
+  "description": "The Runner of API Integration Tests. Run Postman based collections via multiple Newman instamces.",
+  "main": "ITRunner/main.js",
+  "dependencies": {
+    "newman": "^4.4.1",
+    "newman-reporter-html": "^1.0.2",
+    "recursive-readdir": "^2.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node ITRunner/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "local"
+  },
+  "keywords": [
+    "IT",
+    "test",
+    "node10",
+    "newman"
+  ],
+  "author": "Sergey Mikheev",
+  "license": "Apache-2"
+}

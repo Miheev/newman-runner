@@ -1,0 +1,103 @@
+{
+  "info": {
+    "_postman_id": "54f793e5-76c2-4eb8-b650-052dd9c5522f",
+    "name": "EE-Rest",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get json",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "32aa83d4-e58a-4adb-a89e-d0edbed983a0",
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('...', function () {",
+              "   pm.response.to.have.status(200);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{authorization}}",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"filterSubject\":\"\",\n\"filterSubjectConstraint\":\"0\",\n\"filterDescription\":\"\",\n\"filterDescriptionConstraint\":\"0\",\n\"filterType\":\"-1\",\n\"filterTypeConstraint\":\"0\",\n\"filterPriority\":\"-1\",\n\"filterPriorityConstraint\":\"0\",\n\"filterOpenTimeAfter\":\"\",\n\"filterOpenTimeBefore\":\"\",\n\"filterCloseTimeAfter\":\"\",\n\"filterCloseTimeBefore\":\"\",\n\"showArchived\":\"false\",\n\"showSubteamIncidents\":\"false\",\n\"isAscending\":\"false\",\n\"showByOwner\":\"0\",\n\"sortColumn\":\"title\",\n\"pageSize\":\"2\",\n\"searchCount\":\"-1\",\n\"searchOffset\":\"0\",\n\"customerId\":\"1001\"\n}"
+        },
+        "url": {
+          "raw": "{{serverProtocol}}://{{serverHost}}:{{serverPort}}/ee-rest/rest/json",
+          "protocol": "{{serverProtocol}}",
+          "host": [
+            "{{serverHost}}"
+          ],
+          "port": "{{serverPort}}",
+          "path": [
+            "ee-rest",
+            "rest",
+            "json"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get xml",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "32aa83d4-e58a-4adb-a89e-d0edbed983a0",
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('...', function () {",
+              "   pm.response.to.have.status(200);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{authorization}}",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "{serverProtocol}}://{{serverHost}}:{{serverPort}}/ee-rest/rest/json",
+          "protocol": "{{serverProtocol}}",
+          "host": [
+            "{{serverHost}}"
+          ],
+          "port": "{{serverPort}}",
+          "path": [
+            "ee-rest",
+            "rest",
+            "xml"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
